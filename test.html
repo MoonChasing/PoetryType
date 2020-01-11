@@ -6,6 +6,27 @@
     <link rel="stylesheet" type="text/css" href="demo.css" />
     <link rel="stylesheet" type="text/css" href="temp.css" />
     <script src="demo.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    
+    <script>
+        $(function(){
+            $("#original p").mouseover(function(){
+                var index=$("#original p").index(this);
+                var translation = $("#translation").find("p").get(index)
+                $(translation).css('color', "#ffffff")
+                console.log(translation)
+            });
+        });
+
+        $(function(){
+            $("#original p").mouseout(function(){
+                var index=$("#original p").index(this);
+                var translation = $("#translation").find("p").get(index)
+                $(translation).css('color', "#888")
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -14,43 +35,46 @@
         <div class="article" id="original" onscroll="myFun()" onmousewheel="myFun()">
             <h3 class="title">离骚</h3>
             <h4>屈原</h4>
-            <p>帝<span class="tooltip">高阳<span class="tooltiptext">高阳:颛顼之号。</span></span>之<span class="tooltip">苗裔<span class="tooltiptext">苗裔:苗，初生的禾本植物。裔，衣服的末边。此苗裔连用，喻指子孙后代。</span></span>兮，<span class="tooltip">朕<span class="tooltiptext">朕:我。</span></span><span class="tooltip">皇<span class="tooltiptext">皇:美。</span></span><span class="tooltip">考<span class="tooltiptext">考:已故的父亲。</span></span>曰伯庸。</p>
-<p><span class="tooltip">摄提<span class="tooltiptext">摄提:太岁在寅时为摄提格。此指寅年。</span></span><span class="tooltip">贞<span class="tooltiptext">贞:正。</span></span>于<span class="tooltip">孟<span class="tooltiptext">孟:开始。</span></span><span class="tooltip">陬<span class="tooltiptext">陬:正月。</span></span>兮，惟<span class="tooltip">庚寅<span class="tooltiptext">庚寅:指庚寅之日。古以干支相配来纪日。</span></span>吾以<span class="tooltip">降<span class="tooltiptext">降:降生。</span></span>。</p>
-<p>皇览<span class="tooltip">揆<span class="tooltiptext">揆:推理揣度。</span></span>余初度兮，<span class="tooltip">肇<span class="tooltiptext">肇:开始。</span></span><span class="tooltip">锡<span class="tooltiptext">锡:通「赐」，给予；赐给。《集韻》:「斯義切，音‘瀃（sì）’」。予也。本作賜。</span></span>余以嘉名:</p>
-<p><span class="tooltip">名<span class="tooltiptext">名:命名。</span></span>余曰正则兮，<span class="tooltip">字<span class="tooltiptext">字:表字，这里活用作动词，起个表字。</span></span>余曰灵均。</p>
-<p>纷吾既有此<span class="tooltip">内美<span class="tooltiptext">内美:内在的美好品质。</span></span>兮，又<span class="tooltip">重<span class="tooltiptext">重:再。</span></span>之以修能。</p>
-<p><span class="tooltip">扈<span class="tooltiptext">扈:楚方言，披挂。</span></span><span class="tooltip">江离<span class="tooltiptext">江离:香草名。</span></span>与辟<span class="tooltip">芷<span class="tooltiptext">芷:香草名。</span></span>兮，<span class="tooltip">纫<span class="tooltiptext">纫:一作「纽」，草有茎叶可做绳索。</span></span><span class="tooltip">秋兰<span class="tooltiptext">秋兰:香草名。即泽兰，秋季开花。</span></span>以为佩。</p>
-<p><span class="tooltip">汩<span class="tooltiptext">汩:水疾流的样子，此处用以形容时光飞逝。</span></span>余若将不及兮，恐年岁之<span class="tooltip">不吾与<span class="tooltiptext">不吾与:宾语前置，即「不与吾」，不等待我。</span></span>。</p>
-<p>朝<span class="tooltip">搴<span class="tooltiptext">搴:拔取。</span></span>阰之木兰兮，夕<span class="tooltip">揽<span class="tooltiptext">揽:采摘。</span></span>洲之<span class="tooltip">宿莽<span class="tooltiptext">宿莽:草名，经冬不死。</span></span>。</p>
-<p>日月<span class="tooltip">忽<span class="tooltiptext">忽:迅速的样子。</span></span>其不淹兮，春与秋其<span class="tooltip">代序<span class="tooltiptext">代序:指不断更迭。</span></span>。</p>
-<p><span class="tooltip">惟<span class="tooltiptext">惟:思虑。</span></span>草木之零落兮，恐美人之<span class="tooltip">迟暮<span class="tooltiptext">迟暮:衰老。</span></span>。</p>
-<p>不<span class="tooltip">抚<span class="tooltiptext">抚:趁。</span></span>壮而弃秽兮，何不改乎<span class="tooltip">此度<span class="tooltiptext">此度:指现行的政治法度。</span></span>？</p>
-<p>乘<span class="tooltip">骐骥<span class="tooltiptext">骐骥:骏马。</span></span>以驰骋兮，来吾<span class="tooltip">道<span class="tooltiptext">道:通「导」，引导。</span></span>夫先路！</p>
-<p>昔<span class="tooltip">三后<span class="tooltiptext">三后:夏禹、商汤、周文王。</span></span>之纯粹兮，<span class="tooltip">固<span class="tooltiptext">固:本来。</span></span>众芳之所在。</p>
-<p>杂申椒与菌桂兮，岂<span class="tooltip">惟纫<span class="tooltiptext">惟纫:一作「维纽」。</span></span>夫蕙茝！</p>
-<p>彼尧、舜之<span class="tooltip">耿介<span class="tooltiptext">耿介:光明正大。</span></span>兮，既<span class="tooltip">遵道<span class="tooltiptext">遵道:遵循正道。</span></span>而得路。</p>
-<p>何桀纣之<span class="tooltip">昌披<span class="tooltiptext">昌披:猖狂。</span></span>兮，夫唯<span class="tooltip">捷径<span class="tooltiptext">捷径:邪道。</span></span>以窘步。</p>
-<p>惟党人之<span class="tooltip">偷乐<span class="tooltiptext">偷乐:苟且享乐。</span></span>兮，路<span class="tooltip">幽昧<span class="tooltiptext">幽昧:黑暗。</span></span>以险隘。</p>
-<p>岂余身之惮<span class="tooltip">殃<span class="tooltiptext">殃:灾祸。</span></span>兮，恐皇舆之<span class="tooltip">败绩<span class="tooltiptext">败绩:喻指君国的倾危。</span></span>！</p>
-<p>忽奔走以先后兮，及前王之<span class="tooltip">踵武<span class="tooltiptext">踵武:足迹，即脚印。</span></span>。</p>
-<p><span class="tooltip">荃<span class="tooltiptext">荃:香草名，喻楚怀王。</span></span>不察余之忠情兮，反信谗而<span class="tooltip">齌怒<span class="tooltiptext">齌怒:暴怒。</span></span>。</p>
-<p>余固知<span class="tooltip">謇謇<span class="tooltiptext">謇謇:形容忠贞直言的样子。</span></span>之为患兮，忍而不能舍也。</p>
-<p>指<span class="tooltip">九天<span class="tooltiptext">九天:古人认为天有九重，故言。</span></span>以为<span class="tooltip">正<span class="tooltiptext">正:通「证」。</span></span>兮，夫唯灵修之故也。</p>
-<p>余<span class="tooltip">既<span class="tooltiptext">既:本来。</span></span>不难离别兮，伤灵修之<span class="tooltip">数化<span class="tooltiptext">数化:多次变化。</span></span>。</p>
-<p>余既<span class="tooltip">滋<span class="tooltiptext">滋:栽种。</span></span>兰之九畹兮，又<span class="tooltip">树<span class="tooltiptext">树:种植。</span></span>蕙之百<span class="tooltip">亩<span class="tooltiptext">亩:二百四十步为亩。</span></span>。</p>
-<p><span class="tooltip">畦<span class="tooltiptext">畦:五十亩为畦。</span></span><span class="tooltip">留夷<span class="tooltiptext">留夷:香草名。</span></span>与<span class="tooltip">揭车<span class="tooltiptext">揭车:香草名。</span></span>兮，杂杜衡与芳芷。</p>
-<p><span class="tooltip">冀<span class="tooltiptext">冀:希望。</span></span>枝叶之<span class="tooltip">峻<span class="tooltiptext">峻:长。</span></span>茂兮，愿竢时乎吾将<span class="tooltip">刈<span class="tooltiptext">刈:收获。</span></span>。</p>
-<p>虽<span class="tooltip">萎<span class="tooltiptext">萎:枯萎。</span></span><span class="tooltip">绝<span class="tooltiptext">绝:落尽。</span></span>其亦何伤兮，哀众芳之<span class="tooltip">芜<span class="tooltiptext">芜:荒芜。</span></span><span class="tooltip">秽<span class="tooltiptext">秽:污秽。</span></span>。</p>
-<p>众皆<span class="tooltip">竞<span class="tooltiptext">竞:并。</span></span>进以贪婪兮，凭不猒乎求索。</p>
-<p><span class="tooltip">羌<span class="tooltiptext">羌:楚人语气词。</span></span>内恕己以量人兮，各<span class="tooltip">兴<span class="tooltiptext">兴:生。</span></span>心而嫉妒。</p>
-<p><span class="tooltip">忽<span class="tooltiptext">忽:急。</span></span><span class="tooltip">驰骛<span class="tooltiptext">驰骛:乱驰。</span></span>以追逐兮，非余心之所急。</p>
-<p>老<span class="tooltip">冉冉<span class="tooltiptext">冉冉:渐渐。</span></span>其将至兮，恐修名之不立。</p>
-<p>朝饮木兰之坠露兮，夕餐秋菊之落<span class="tooltip">英<span class="tooltiptext">英:花。</span></span>。</p>
-<p>苟余情其<span class="tooltip">信姱<span class="tooltiptext">信姱:诚信而美好。</span></span>以<span class="tooltip">练要<span class="tooltiptext">练要:心中简练合于要道。</span></span>兮，长顑颔亦何伤。</p>
-<p>揽木根以结茝兮，<span class="tooltip">贯<span class="tooltiptext">贯:拾取。</span></span>薜荔之落蕊。</p>
-<p><span class="tooltip">矫<span class="tooltiptext">矫:举起。</span></span>菌桂以纫蕙兮，<span class="tooltip">索<span class="tooltiptext">索:草有茎叶可做绳索。此作动词，意为搓绳。</span></span>胡绳之<span class="tooltip">纚纚<span class="tooltiptext">纚纚:绳索美好貌。</span></span>。</p>
-<p>謇吾<span class="tooltip">法<span class="tooltiptext">法:效法。</span></span>夫前修兮，非时俗之所服。</p>
-<p>虽不<span class="tooltip">周<span class="tooltiptext">周:合。</span></span>于今之人兮，愿依彭咸之遗则。
+            <p>帝<span class="tooltip">高阳<span class="tooltiptext">高阳 : 颛顼之号。</span></span>之<span class="tooltip">苗裔<span class="tooltiptext">苗裔 : 苗，初生的禾本植物。裔，衣服的末边。此苗裔连用，喻指子孙后代。</span></span>兮，<span class="tooltip">朕<span class="tooltiptext">朕 : 我。</span></span><span class="tooltip">皇<span class="tooltiptext">皇 : 美。</span></span><span class="tooltip">考<span class="tooltiptext">考 : 已故的父亲。</span></span>曰伯庸。</p>
+<p><span class="tooltip">摄提<span class="tooltiptext">摄提 : 太岁在寅时为摄提格。此指寅年。</span></span><span class="tooltip">贞<span class="tooltiptext">贞 : 正。</span></span>于<span class="tooltip">孟<span class="tooltiptext">孟 : 开始。</span></span><span class="tooltip">陬<span class="tooltiptext">陬 : 正月。</span></span>兮，惟<span class="tooltip">庚寅<span class="tooltiptext">庚寅 : 指庚寅之日。古以干支相配来纪日。</span></span>吾以<span class="tooltip">降<span class="tooltiptext">降 : 降生。</span></span>。</p>
+<p>皇览<span class="tooltip">揆<span class="tooltiptext">揆 : 推理揣度。</span></span>余初度兮，<span class="tooltip">肇<span class="tooltiptext">肇 : 开始。</span></span><span class="tooltip">锡<span class="tooltiptext">锡 : 通「赐」，给予；赐给。《集韻》:「斯義切，音‘瀃（sì）’」。予也。本作賜。</span></span>余以嘉名:</p>
+<p><span class="tooltip">名<span class="tooltiptext">名 : 命名。</span></span>余曰正则兮，<span class="tooltip">字<span class="tooltiptext">字 : 表字，这里活用作动词，起个表字。</span></span>余曰灵均。</p>
+<p>纷吾既有此<span class="tooltip">内美<span class="tooltiptext">内美 : 内在的美好品质。</span></span>兮，又<span class="tooltip">重<span class="tooltiptext">重 : 再。</span></span>之以修能。</p>
+<p><span class="tooltip">扈<span class="tooltiptext">扈 : 楚方言，披挂。</span></span><span class="tooltip">江离<span class="tooltiptext">江离 : 香草名。</span></span>与辟<span class="tooltip">芷<span class="tooltiptext">芷 : 香草名。</span></span>兮，<span class="tooltip">纫<span class="tooltiptext">纫 : 一作「纽」，草有茎叶可做绳索。</span></span><span class="tooltip">秋兰<span class="tooltiptext">秋兰 : 香草名。即泽兰，秋季开花。</span></span>以为佩。</p>
+<p><span class="tooltip">汩<span class="tooltiptext">汩 : 水疾流的样子，此处用以形容时光飞逝。</span></span>余若将不及兮，恐年岁之<span class="tooltip">不吾与<span class="tooltiptext">不吾与 : 宾语前置，即「不与吾」，不等待我。</span></span>。</p>
+<p>朝<span class="tooltip">搴<span class="tooltiptext">搴 : 拔取。</span></span>阰之木兰兮，夕<span class="tooltip">揽<span class="tooltiptext">揽 : 采摘。</span></span>洲之<span class="tooltip">宿莽<span class="tooltiptext">宿莽 : 草名，经冬不死。</span></span>。</p>
+<p>日月<span class="tooltip">忽<span class="tooltiptext">忽 : 迅速的样子。</span></span>其不淹兮，春与秋其<span class="tooltip">代序<span class="tooltiptext">代序 : 指不断更迭。</span></span>。</p>
+<p><span class="tooltip">惟<span class="tooltiptext">惟 : 思虑。</span></span>草木之零落兮，恐美人之<span class="tooltip">迟暮<span class="tooltiptext">迟暮 : 衰老。</span></span>。</p>
+<p>不<span class="tooltip">抚<span class="tooltiptext">抚 : 趁。</span></span>壮而弃秽兮，何不改乎<span class="tooltip">此度<span class="tooltiptext">此度 : 指现行的政治法度。</span></span>？</p>
+<p>乘<span class="tooltip">骐骥<span class="tooltiptext">骐骥 : 骏马。</span></span>以驰骋兮，来吾<span class="tooltip">道<span class="tooltiptext">道 : 通「导」，引导。</span></span>夫先路！</p>
+<p>昔<span class="tooltip">三后<span class="tooltiptext">三后 : 夏禹、商汤、周文王。</span></span>之纯粹兮，<span class="tooltip">固<span class="tooltiptext">固 : 本来。</span></span>众芳之所在。</p>
+<p>杂申椒与菌桂兮，岂<span class="tooltip">惟纫<span class="tooltiptext">惟纫 : 一作「维纽」。</span></span>夫蕙茝！</p>
+<p>彼尧、舜之<span class="tooltip">耿介<span class="tooltiptext">耿介 : 光明正大。</span></span>兮，既<span class="tooltip">遵道<span class="tooltiptext">遵道 : 遵循正道。</span></span>而得路。</p>
+<p>何桀纣之<span class="tooltip">昌披<span class="tooltiptext">昌披 : 猖狂。</span></span>兮，夫唯<span class="tooltip">捷径<span class="tooltiptext">捷径 : 邪道。</span></span>以窘步。</p>
+<p>惟党人之<span class="tooltip">偷乐<span class="tooltiptext">偷乐 : 苟且享乐。</span></span>兮，路<span class="tooltip">幽昧<span class="tooltiptext">幽昧 : 黑暗。</span></span>以险隘。</p>
+<p>岂余身之惮<span class="tooltip">殃<span class="tooltiptext">殃 : 灾祸。</span></span>兮，恐皇舆之<span class="tooltip">败绩<span class="tooltiptext">败绩 : 喻指君国的倾危。</span></span>！</p>
+<p>忽奔走以先后兮，及前王之<span class="tooltip">踵武<span class="tooltiptext">踵武 : 足迹，即脚印。</span></span>。</p>
+<p><span class="tooltip">荃<span class="tooltiptext">荃 : 香草名，喻楚怀王。</span></span>不察余之忠情兮，反信谗而<span class="tooltip">齌怒<span class="tooltiptext">齌怒 : 暴怒。</span></span>。</p>
+<p>余固知<span class="tooltip">謇謇<span class="tooltiptext">謇謇 : 形容忠贞直言的样子。</span></span>之为患兮，忍而不能舍也。</p>
+<p>指<span class="tooltip">九天<span class="tooltiptext">九天 : 古人认为天有九重，故言。</span></span>以为<span class="tooltip">正<span class="tooltiptext">正 : 通「证」。</span></span>兮，夫唯灵修之故也。</p>
+<p>初既与余成言兮，后悔遁而有他。</p>
+<p>余<span class="tooltip">既<span class="tooltiptext">既 : 本来。</span></span>不难离别兮，伤灵修之<span class="tooltip">数化<span class="tooltiptext">数化 : 多次变化。</span></span>。</p>
+<p>余既<span class="tooltip">滋<span class="tooltiptext">滋 : 栽种。</span></span>兰之九畹兮，又<span class="tooltip">树<span class="tooltiptext">树 : 种植。</span></span>蕙之百<span class="tooltip">亩<span class="tooltiptext">亩 : 二百四十步为亩。</span></span>。</p>
+<p><span class="tooltip">畦<span class="tooltiptext">畦 : 五十亩为畦。</span></span><span class="tooltip">留夷<span class="tooltiptext">留夷 : 香草名。</span></span>与<span class="tooltip">揭车<span class="tooltiptext">揭车 : 香草名。</span></span>兮，杂杜衡与芳芷。</p>
+<p><span class="tooltip">冀<span class="tooltiptext">冀 : 希望。</span></span>枝叶之<span class="tooltip">峻<span class="tooltiptext">峻 : 长。</span></span>茂兮，愿竢时乎吾将<span class="tooltip">刈<span class="tooltiptext">刈 : 收获。</span></span>。</p>
+<p>虽<span class="tooltip">萎<span class="tooltiptext">萎 : 枯萎。</span></span><span class="tooltip">绝<span class="tooltiptext">绝 : 落尽。</span></span>其亦何伤兮，哀众芳之<span class="tooltip">芜<span class="tooltiptext">芜 : 荒芜。</span></span><span class="tooltip">秽<span class="tooltiptext">秽 : 污秽。</span></span>。</p>
+<p>众皆<span class="tooltip">竞<span class="tooltiptext">竞 : 并。</span></span>进以贪婪兮，凭不猒乎求索。</p>
+<p><span class="tooltip">羌<span class="tooltiptext">羌 : 楚人语气词。</span></span>内恕己以量人兮，各<span class="tooltip">兴<span class="tooltiptext">兴 : 生。</span></span>心而嫉妒。</p>
+<p><span class="tooltip">忽<span class="tooltiptext">忽 : 急。</span></span><span class="tooltip">驰骛<span class="tooltiptext">驰骛 : 乱驰。</span></span>以追逐兮，非余心之所急。</p>
+<p>老<span class="tooltip">冉冉<span class="tooltiptext">冉冉 : 渐渐。</span></span>其将至兮，恐修名之不立。</p>
+<p>朝饮木兰之坠露兮，夕餐秋菊之落<span class="tooltip">英<span class="tooltiptext">英 : 花。</span></span>。</p>
+<p>苟余情其<span class="tooltip">信姱<span class="tooltiptext">信姱 : 诚信而美好。</span></span>以<span class="tooltip">练要<span class="tooltiptext">练要 : 心中简练合于要道。</span></span>兮，长顑颔亦何伤。</p>
+<p>揽木根以结茝兮，<span class="tooltip">贯<span class="tooltiptext">贯 : 拾取。</span></span>薜荔之落蕊。</p>
+<p><span class="tooltip">矫<span class="tooltiptext">矫 : 举起。</span></span>菌桂以纫蕙兮，<span class="tooltip">索<span class="tooltiptext">索 : 草有茎叶可做绳索。此作动词，意为搓绳。</span></span>胡绳之<span class="tooltip">纚纚<span class="tooltiptext">纚纚 : 绳索美好貌。</span></span>。</p>
+<p>謇吾<span class="tooltip">法<span class="tooltiptext">法 : 效法。</span></span>夫前修兮，非时俗之所服。</p>
+<p>虽不<span class="tooltip">周<span class="tooltiptext">周 : 合。</span></span>于今之人兮，愿依彭咸之遗则。</p>
+
+
             <p>长太息以掩涕兮，哀民生之多艰。</p>
             <p>余虽好修姱以鞿羁兮，謇朝谇而夕替。</p>
             <p>既替余以蕙纕兮，又申之以揽茝。</p>

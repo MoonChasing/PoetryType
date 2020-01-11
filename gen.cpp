@@ -57,6 +57,7 @@ int main()
 		}
 		if(tmp == "end")
 		{
+			p += "</p>\n";
 			originalHTML.push_back(p);
 			std::cout << "=================原文结束=================" << std::endl;
 			break;
@@ -93,8 +94,13 @@ int main()
 				p += sentence.substr(sentinel);
 			}
 			std::cout << "Note end --------------------" << std::endl;
+			getline(raw, tmp);
 		}
-		getline(raw, tmp);
+		else
+		{
+			p += sentence;
+		}
+
 		translation.push_back(tmp);
 		std::cout << tmp << std::endl;
 	}
@@ -129,7 +135,7 @@ std::string genOriginalSentence(
 		ans += ("<span class=\"tooltip\">" 
 			   + word
 			   + "<span class=\"tooltiptext\">"
-			   + word + ":" + note
+			   + word + " : " + note
 			   + "</span></span>");
 		sentinel = pos + word.length();
 		std::cout << "Sentinel = " << sentinel << std::endl;
