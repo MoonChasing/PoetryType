@@ -1,0 +1,48 @@
+body
+{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+#container
+{
+    background: #404040;
+    display: flex;
+    border: 1px solid #bbb;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+.article
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 3em;
+    margin-right: 2em;
+
+    background: #404040;
+    color: #888;
+    font-family: Optima-Regular, "Source Han Serif SC", Manuale, "Consolas", "Noto Serif CJK SC", STFangsong, FangSong, FangSong_GB2312, "Songti SC", STSong, serif, PingFangSC-Light, PingFangTC-Light, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important;
+    font-size: 20px;
+    min-width: 40%;
+    overflow: auto;
+}
+
+.article h3
+{
+    text-align: center;
+}
+
+.article h4
+{
+    text-align: center;
+}
+
+.article p
+{
+    /* text-indent: 2em; */
+    line-height: 1.5;
+    text-align: center;
+}
