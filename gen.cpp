@@ -30,7 +30,7 @@ void writeln(std::fstream& out, std::string& str)
 
 int main()
 {
-	std::fstream raw("script.txt");
+	std::fstream raw("赤壁赋.txt");
 	std::string tmp;
 	std::string title, name;
 	if(!raw.is_open())
@@ -43,22 +43,30 @@ int main()
 
 	std::string word, note;
 	std::vector<std::string> original, translation;
-	std::vector<std::string> originalHTML;
+	std::vector<std::string> originalHTML, translationHTML;
 	std::string p("<p>");
+	std::string tp("<p>");
 	while(getline(raw, tmp))
 	{
 		if(tmp.empty())	//end of segment
 		{
 			p += "</p>\n";
 			originalHTML.push_back(p);
+			tp += "</p>\n";
+			translationHTML.push_back(tp);
 			p = "<p>";
+			tp = "<p>";
 			std::cout << "=====================该段结束==================" << std::endl;
 			continue;
 		}
+
+		// origin end!
 		if(tmp == "end")
 		{
 			p += "</p>\n";
 			originalHTML.push_back(p);
+			tp += "</p>\n";
+			translationHTML.push_back(tp);
 			std::cout << "=================原文结束=================" << std::endl;
 			break;
 		}
@@ -67,6 +75,8 @@ int main()
 		std::string sentence(tmp);
 		std::cout << tmp  << std::endl;
 		getline(raw, tmp);
+		p += "<tt>";
+		tp += "<tt>";
 
 		if(tmp == "[")  //this sentence has note
 		{
@@ -93,6 +103,7 @@ int main()
 			{
 				p += sentence.substr(sentinel);
 			}
+
 			std::cout << "Note end --------------------" << std::endl;
 			getline(raw, tmp);
 		}
@@ -101,7 +112,9 @@ int main()
 			p += sentence;
 		}
 
+		p += "</tt>";		//sentence end!
 		translation.push_back(tmp);
+		tp += tmp + "</tt>";
 		std::cout << tmp << std::endl;
 	}
 	std::fstream outTest("test_p.txt", std::ios::out);
@@ -110,6 +123,10 @@ int main()
 		std::cout << "bad!" << std::endl;
 	}
 	for(auto s : originalHTML)
+		outTest << s;
+	for(int i=0; i<5; i++)
+		outTest << std::endl;
+	for(auto s : translationHTML)
 		outTest << s;
 	raw.close();
 	outTest.close();

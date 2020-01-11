@@ -44,5 +44,14 @@ body
 {
     /* text-indent: 2em; */
     line-height: 1.5;
-    text-align: center;
+    /* text-align: center; */
+}
+/* span.tooltip
+{
+    line-height: 1.5;
+    margin-left: -2em;
+} */
+tt
+{
+    font-family: Optima-Regular, "Source Han Serif SC", Manuale, "Consolas", "Noto Serif CJK SC", STFangsong, FangSong, FangSong_GB2312, "Songti SC", STSong, serif, PingFangSC-Light, PingFangTC-Light, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important; 
 }

@@ -2,26 +2,40 @@
 <html>
 
 <head>
-    <title>离骚</title>
+    <title>赤壁赋</title>
     <link rel="stylesheet" type="text/css" href="demo.css" />
     <link rel="stylesheet" type="text/css" href="temp.css" />
     <script src="demo.js"></script>
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     
     <script>
+        // $(function(){
+        //     $("#original p").mouseover(function(){
+        //         var index=$("#original p").index(this);
+        //         var translation = $("#translation").find("p").get(index)
+        //         $(translation).css('color', "#ffffff")
+        //     });
+        // });
+
+        // $(function(){
+        //     $("#original p").mouseout(function(){
+        //         var index=$("#original p").index(this);
+        //         var translation = $("#translation").find("p").get(index)
+        //         $(translation).css('color', "#888")
+        //     });
+        // });
         $(function(){
-            $("#original p").mouseover(function(){
-                var index=$("#original p").index(this);
-                var translation = $("#translation").find("p").get(index)
+            $("#original tt").mouseover(function(){
+                var index=$("#original tt").index(this);
+                var translation = $("#translation").find("tt").get(index)
                 $(translation).css('color', "#ffffff")
-                console.log(translation)
             });
         });
 
         $(function(){
-            $("#original p").mouseout(function(){
-                var index=$("#original p").index(this);
-                var translation = $("#translation").find("p").get(index)
+            $("#original tt").mouseout(function(){
+                var index=$("#original tt").index(this);
+                var translation = $("#translation").find("tt").get(index)
                 $(translation).css('color', "#888")
             });
         });
@@ -33,389 +47,24 @@
 
     <div id="container">
         <div class="article" id="original" onscroll="myFun()" onmousewheel="myFun()">
-            <h3 class="title">离骚</h3>
-            <h4>屈原</h4>
-            <p>帝<span class="tooltip">高阳<span class="tooltiptext">高阳 : 颛顼之号。</span></span>之<span class="tooltip">苗裔<span class="tooltiptext">苗裔 : 苗，初生的禾本植物。裔，衣服的末边。此苗裔连用，喻指子孙后代。</span></span>兮，<span class="tooltip">朕<span class="tooltiptext">朕 : 我。</span></span><span class="tooltip">皇<span class="tooltiptext">皇 : 美。</span></span><span class="tooltip">考<span class="tooltiptext">考 : 已故的父亲。</span></span>曰伯庸。</p>
-<p><span class="tooltip">摄提<span class="tooltiptext">摄提 : 太岁在寅时为摄提格。此指寅年。</span></span><span class="tooltip">贞<span class="tooltiptext">贞 : 正。</span></span>于<span class="tooltip">孟<span class="tooltiptext">孟 : 开始。</span></span><span class="tooltip">陬<span class="tooltiptext">陬 : 正月。</span></span>兮，惟<span class="tooltip">庚寅<span class="tooltiptext">庚寅 : 指庚寅之日。古以干支相配来纪日。</span></span>吾以<span class="tooltip">降<span class="tooltiptext">降 : 降生。</span></span>。</p>
-<p>皇览<span class="tooltip">揆<span class="tooltiptext">揆 : 推理揣度。</span></span>余初度兮，<span class="tooltip">肇<span class="tooltiptext">肇 : 开始。</span></span><span class="tooltip">锡<span class="tooltiptext">锡 : 通「赐」，给予；赐给。《集韻》:「斯義切，音‘瀃（sì）’」。予也。本作賜。</span></span>余以嘉名:</p>
-<p><span class="tooltip">名<span class="tooltiptext">名 : 命名。</span></span>余曰正则兮，<span class="tooltip">字<span class="tooltiptext">字 : 表字，这里活用作动词，起个表字。</span></span>余曰灵均。</p>
-<p>纷吾既有此<span class="tooltip">内美<span class="tooltiptext">内美 : 内在的美好品质。</span></span>兮，又<span class="tooltip">重<span class="tooltiptext">重 : 再。</span></span>之以修能。</p>
-<p><span class="tooltip">扈<span class="tooltiptext">扈 : 楚方言，披挂。</span></span><span class="tooltip">江离<span class="tooltiptext">江离 : 香草名。</span></span>与辟<span class="tooltip">芷<span class="tooltiptext">芷 : 香草名。</span></span>兮，<span class="tooltip">纫<span class="tooltiptext">纫 : 一作「纽」，草有茎叶可做绳索。</span></span><span class="tooltip">秋兰<span class="tooltiptext">秋兰 : 香草名。即泽兰，秋季开花。</span></span>以为佩。</p>
-<p><span class="tooltip">汩<span class="tooltiptext">汩 : 水疾流的样子，此处用以形容时光飞逝。</span></span>余若将不及兮，恐年岁之<span class="tooltip">不吾与<span class="tooltiptext">不吾与 : 宾语前置，即「不与吾」，不等待我。</span></span>。</p>
-<p>朝<span class="tooltip">搴<span class="tooltiptext">搴 : 拔取。</span></span>阰之木兰兮，夕<span class="tooltip">揽<span class="tooltiptext">揽 : 采摘。</span></span>洲之<span class="tooltip">宿莽<span class="tooltiptext">宿莽 : 草名，经冬不死。</span></span>。</p>
-<p>日月<span class="tooltip">忽<span class="tooltiptext">忽 : 迅速的样子。</span></span>其不淹兮，春与秋其<span class="tooltip">代序<span class="tooltiptext">代序 : 指不断更迭。</span></span>。</p>
-<p><span class="tooltip">惟<span class="tooltiptext">惟 : 思虑。</span></span>草木之零落兮，恐美人之<span class="tooltip">迟暮<span class="tooltiptext">迟暮 : 衰老。</span></span>。</p>
-<p>不<span class="tooltip">抚<span class="tooltiptext">抚 : 趁。</span></span>壮而弃秽兮，何不改乎<span class="tooltip">此度<span class="tooltiptext">此度 : 指现行的政治法度。</span></span>？</p>
-<p>乘<span class="tooltip">骐骥<span class="tooltiptext">骐骥 : 骏马。</span></span>以驰骋兮，来吾<span class="tooltip">道<span class="tooltiptext">道 : 通「导」，引导。</span></span>夫先路！</p>
-<p>昔<span class="tooltip">三后<span class="tooltiptext">三后 : 夏禹、商汤、周文王。</span></span>之纯粹兮，<span class="tooltip">固<span class="tooltiptext">固 : 本来。</span></span>众芳之所在。</p>
-<p>杂申椒与菌桂兮，岂<span class="tooltip">惟纫<span class="tooltiptext">惟纫 : 一作「维纽」。</span></span>夫蕙茝！</p>
-<p>彼尧、舜之<span class="tooltip">耿介<span class="tooltiptext">耿介 : 光明正大。</span></span>兮，既<span class="tooltip">遵道<span class="tooltiptext">遵道 : 遵循正道。</span></span>而得路。</p>
-<p>何桀纣之<span class="tooltip">昌披<span class="tooltiptext">昌披 : 猖狂。</span></span>兮，夫唯<span class="tooltip">捷径<span class="tooltiptext">捷径 : 邪道。</span></span>以窘步。</p>
-<p>惟党人之<span class="tooltip">偷乐<span class="tooltiptext">偷乐 : 苟且享乐。</span></span>兮，路<span class="tooltip">幽昧<span class="tooltiptext">幽昧 : 黑暗。</span></span>以险隘。</p>
-<p>岂余身之惮<span class="tooltip">殃<span class="tooltiptext">殃 : 灾祸。</span></span>兮，恐皇舆之<span class="tooltip">败绩<span class="tooltiptext">败绩 : 喻指君国的倾危。</span></span>！</p>
-<p>忽奔走以先后兮，及前王之<span class="tooltip">踵武<span class="tooltiptext">踵武 : 足迹，即脚印。</span></span>。</p>
-<p><span class="tooltip">荃<span class="tooltiptext">荃 : 香草名，喻楚怀王。</span></span>不察余之忠情兮，反信谗而<span class="tooltip">齌怒<span class="tooltiptext">齌怒 : 暴怒。</span></span>。</p>
-<p>余固知<span class="tooltip">謇謇<span class="tooltiptext">謇謇 : 形容忠贞直言的样子。</span></span>之为患兮，忍而不能舍也。</p>
-<p>指<span class="tooltip">九天<span class="tooltiptext">九天 : 古人认为天有九重，故言。</span></span>以为<span class="tooltip">正<span class="tooltiptext">正 : 通「证」。</span></span>兮，夫唯灵修之故也。</p>
-<p>初既与余成言兮，后悔遁而有他。</p>
-<p>余<span class="tooltip">既<span class="tooltiptext">既 : 本来。</span></span>不难离别兮，伤灵修之<span class="tooltip">数化<span class="tooltiptext">数化 : 多次变化。</span></span>。</p>
-<p>余既<span class="tooltip">滋<span class="tooltiptext">滋 : 栽种。</span></span>兰之九畹兮，又<span class="tooltip">树<span class="tooltiptext">树 : 种植。</span></span>蕙之百<span class="tooltip">亩<span class="tooltiptext">亩 : 二百四十步为亩。</span></span>。</p>
-<p><span class="tooltip">畦<span class="tooltiptext">畦 : 五十亩为畦。</span></span><span class="tooltip">留夷<span class="tooltiptext">留夷 : 香草名。</span></span>与<span class="tooltip">揭车<span class="tooltiptext">揭车 : 香草名。</span></span>兮，杂杜衡与芳芷。</p>
-<p><span class="tooltip">冀<span class="tooltiptext">冀 : 希望。</span></span>枝叶之<span class="tooltip">峻<span class="tooltiptext">峻 : 长。</span></span>茂兮，愿竢时乎吾将<span class="tooltip">刈<span class="tooltiptext">刈 : 收获。</span></span>。</p>
-<p>虽<span class="tooltip">萎<span class="tooltiptext">萎 : 枯萎。</span></span><span class="tooltip">绝<span class="tooltiptext">绝 : 落尽。</span></span>其亦何伤兮，哀众芳之<span class="tooltip">芜<span class="tooltiptext">芜 : 荒芜。</span></span><span class="tooltip">秽<span class="tooltiptext">秽 : 污秽。</span></span>。</p>
-<p>众皆<span class="tooltip">竞<span class="tooltiptext">竞 : 并。</span></span>进以贪婪兮，凭不猒乎求索。</p>
-<p><span class="tooltip">羌<span class="tooltiptext">羌 : 楚人语气词。</span></span>内恕己以量人兮，各<span class="tooltip">兴<span class="tooltiptext">兴 : 生。</span></span>心而嫉妒。</p>
-<p><span class="tooltip">忽<span class="tooltiptext">忽 : 急。</span></span><span class="tooltip">驰骛<span class="tooltiptext">驰骛 : 乱驰。</span></span>以追逐兮，非余心之所急。</p>
-<p>老<span class="tooltip">冉冉<span class="tooltiptext">冉冉 : 渐渐。</span></span>其将至兮，恐修名之不立。</p>
-<p>朝饮木兰之坠露兮，夕餐秋菊之落<span class="tooltip">英<span class="tooltiptext">英 : 花。</span></span>。</p>
-<p>苟余情其<span class="tooltip">信姱<span class="tooltiptext">信姱 : 诚信而美好。</span></span>以<span class="tooltip">练要<span class="tooltiptext">练要 : 心中简练合于要道。</span></span>兮，长顑颔亦何伤。</p>
-<p>揽木根以结茝兮，<span class="tooltip">贯<span class="tooltiptext">贯 : 拾取。</span></span>薜荔之落蕊。</p>
-<p><span class="tooltip">矫<span class="tooltiptext">矫 : 举起。</span></span>菌桂以纫蕙兮，<span class="tooltip">索<span class="tooltiptext">索 : 草有茎叶可做绳索。此作动词，意为搓绳。</span></span>胡绳之<span class="tooltip">纚纚<span class="tooltiptext">纚纚 : 绳索美好貌。</span></span>。</p>
-<p>謇吾<span class="tooltip">法<span class="tooltiptext">法 : 效法。</span></span>夫前修兮，非时俗之所服。</p>
-<p>虽不<span class="tooltip">周<span class="tooltiptext">周 : 合。</span></span>于今之人兮，愿依彭咸之遗则。</p>
+            <h3 class="title">赤壁赋</h3>
+            <h4>苏轼</h4>
+            <p><tt><span class="tooltip">壬戌<span class="tooltiptext">壬戌 : 元丰五年，岁次壬戌。古代以干支纪年，该年为壬戌年。</span></span>之秋，七月<span class="tooltip">既望<span class="tooltiptext">既望 : 农历毎月十六。农历毎月十五日为望日，十六日为既望。</span></span>，苏子与客泛舟游于赤壁之下。</tt><tt>清风<span class="tooltip">徐<span class="tooltiptext">徐 : 缓缓地。</span></span>来，水波不<span class="tooltip">兴<span class="tooltiptext">兴 : 起。</span></span>。</tt><tt>举酒<span class="tooltip">属<span class="tooltiptext">属 : 倾注，引申为劝酒。</span></span>客，诵<span class="tooltip">明月之诗<span class="tooltiptext">明月之诗 : 指《诗经・陈风・月出》。</span></span>，歌<span class="tooltip">窈窕之章<span class="tooltiptext">窈窕之章 : 《陈风・月出》诗首章为:“月出皎兮，佼人僚兮，舒窈纠兮，劳心悄兮。”“窈纠” 同 “窈窕”。</span></span>。</tt><tt><span class="tooltip">少焉<span class="tooltiptext">少焉 : 一会儿。</span></span>，月出于东山之上，裴回于<span class="tooltip">斗牛<span class="tooltiptext">斗牛 : 星座名，即斗宿、牛宿。</span></span>之间。</tt><tt><span class="tooltip">白露<span class="tooltiptext">白露 : 白茫茫的水气。</span></span><span class="tooltip">横江<span class="tooltiptext">横江 : 横贯江面。</span></span>，水光接天。<span class="tooltip">纵<span class="tooltiptext">纵 : 任凭。</span></span><span class="tooltip">一苇<span class="tooltiptext">一苇 : 喻极小的船。《诗经・卫风・河广》:“谁谓河广，一苇杭（航）之。” </span></span>之所<span class="tooltip">如<span class="tooltiptext">如 : 往。</span></span>，凌<span class="tooltip">万顷<span class="tooltiptext">万顷 : 极为宽阔的江面。</span></span>之<span class="tooltip">茫然<span class="tooltiptext">茫然 : 旷远的样子。</span></span>。</tt><tt>浩浩乎如<span class="tooltip">凭虚御风<span class="tooltiptext">凭虚御风 : 乘风腾空而遨遊。凭虚，凌空。虚，太空；御，驾御。</span></span>，而不知其所止；</tt><tt>飘飘乎如<span class="tooltip">遗世<span class="tooltiptext">遗世 : 离开尘世。</span></span>独立，<span class="tooltip">羽化<span class="tooltiptext">羽化 : 传说成仙的人能像长了翅膀一样飞昇。</span></span>而<span class="tooltip">登仙<span class="tooltiptext">登仙 : 登上仙境。</span></span>。</tt></p>
+<p><tt>于是饮酒乐甚，<span class="tooltip">扣舷<span class="tooltiptext">扣舷 : 敲打着船边，指打节拍。</span></span>而歌之。</tt><tt>歌曰:“桂棹兮兰桨，击<span class="tooltip">空明<span class="tooltiptext">空明 : 月亮倒映水中的澄明之色。</span></span>兮<span class="tooltip">溯<span class="tooltiptext">溯 : 逆流而上。</span></span><span class="tooltip">流光<span class="tooltiptext">流光 : 在水波上闪动的月光。</span></span>。</tt><tt><span class="tooltip">渺渺<span class="tooltiptext">渺渺 : 悠远的样子。</span></span>兮余怀，望<span class="tooltip">美人<span class="tooltiptext">美人 : 喻心中美好的理想或好的君王。</span></span>兮天一方。” </tt><tt>客有吹洞箫者，<span class="tooltip">倚歌<span class="tooltiptext">倚歌 : 按照歌曲的声调节拍。</span></span>而<span class="tooltip">和<span class="tooltiptext">和 : 同声相应，唱和。</span></span>之。</tt><tt>其声呜呜然，如<span class="tooltip">怨<span class="tooltiptext">怨 : 哀怨。</span></span>如<span class="tooltip">慕<span class="tooltiptext">慕 : 眷恋。</span></span>，如泣如诉；<span class="tooltip">余音<span class="tooltiptext">余音 : 尾声。</span></span><span class="tooltip">袅袅<span class="tooltiptext">袅袅 : 形容声音婉转悠长。</span></span>，不绝如<span class="tooltip">缕<span class="tooltiptext">缕 : 细丝。</span></span>。</tt><tt>舞<span class="tooltip">幽壑<span class="tooltiptext">幽壑 : 深谷，这里指深渊。此句意谓:潜藏在深渊里的蛟龙为之起舞。</span></span>之潜蛟，泣孤舟之<span class="tooltip">嫠妇<span class="tooltiptext">嫠妇 : 寡妇。唐・白乐天《琵琶行》写孤居商人妻云:“去来江口守空船，绕舱明月江水寒。夜深忽梦少年事，梦啼妆泪红阑干。” 这里化用其事。</span></span>。</tt></p>
+<p><tt>苏子<span class="tooltip">愀然<span class="tooltiptext">愀然 : 容色改变的样子。</span></span>，<span class="tooltip">正襟危坐<span class="tooltiptext">正襟危坐 : 整理衣襟，端坐着。</span></span>，而问客曰:“<span class="tooltip">何为其然也<span class="tooltiptext">何为其然也 : 箫声为什么会这么悲凉呢？</span></span>？” </tt><tt>客曰:“‘月明星稀，乌鹊南飞。’此非曹孟德之诗乎？</tt><tt>西望<span class="tooltip">夏口<span class="tooltiptext">夏口 : 故城在今湖北武昌。</span></span>，东望<span class="tooltip">武昌<span class="tooltiptext">武昌 : 今湖北鄂城县。</span></span>，山川相<span class="tooltip">缪<span class="tooltiptext">缪 : 通 “缭”，盘绕。</span></span>，<span class="tooltip">郁<span class="tooltiptext">郁 : 茂盛的样子。</span></span>乎苍苍，此非<span class="tooltip">孟德之困于周郎<span class="tooltiptext">孟德之困于周郎 : 指汉献帝建安十三年，吴将周公瑾败曹孟德八十万大军于赤壁。周郎，公瑾二十四岁拜中郎将，吴中皆呼为 “周郎”。</span></span>者乎？</tt><tt>方其破<span class="tooltip">荆州<span class="tooltiptext">荆州 : 辖南阳、江夏、长沙等八郡，今湖南、湖北一带。</span></span>，下<span class="tooltip">江陵<span class="tooltiptext">江陵 : 当时的荆州首府，今湖北县名。</span></span>，顺流而东也，<span class="tooltip">舳舻<span class="tooltiptext">舳舻 : 战船前後相接，这里指战船。</span></span>千里，旌旗蔽空，<span class="tooltip">酾酒<span class="tooltiptext">酾酒 : 滤酒，这里指斟酒。</span></span>临江，<span class="tooltip">横槊<span class="tooltiptext">横槊 : 横执长矛。槊，长矛。</span></span>赋诗，固一世之雄也，而今安在哉？</tt><tt>况吾与子渔樵于江渚之上，<span class="tooltip">侣<span class="tooltiptext">侣 : 以…… 为伴侣，这里为意动用法。</span></span>鱼虾而友<span class="tooltip">麋<span class="tooltiptext">麋 : 鹿的一种。</span></span>鹿，驾一叶之<span class="tooltip">扁舟<span class="tooltiptext">扁舟 : 小舟。</span></span>，举匏罇以相属。</tt><tt><span class="tooltip">寄<span class="tooltiptext">寄 : 寓托。</span></span><span class="tooltip">蜉蝣<span class="tooltiptext">蜉蝣 : 一种朝生暮死的昆虫。此句喻人生之短暂。</span></span>于天地，<span class="tooltip">渺<span class="tooltiptext">渺 : 小。</span></span><span class="tooltip">沧海<span class="tooltiptext">沧海 : 大海。此句喩人类在天地之间极为渺小。</span></span>之一粟。</tt><tt>哀吾生之<span class="tooltip">须臾<span class="tooltiptext">须臾 : 片刻，形容生命之短。</span></span>，羡长江之无穷。</tt><tt>挟飞仙以遨游，抱明月而<span class="tooltip">长终<span class="tooltiptext">长终 : 至于永远。</span></span>。</tt><tt>知不可乎<span class="tooltip">骤<span class="tooltiptext">骤 : 多。</span></span>得，托<span class="tooltip">遗响<span class="tooltiptext">遗响 : 馀音，指箫声。</span></span>于<span class="tooltip">悲风<span class="tooltiptext">悲风 : 秋风。</span></span>。”</tt></p>
+<p><tt>苏子曰:“客亦知夫水与月乎？</tt><tt><span class="tooltip">逝者如斯<span class="tooltiptext">逝者如斯 : 流逝的像这江水。语出《论语・子罕》:“子在川上曰:‘逝者如斯夫，不舍昼夜。’” 逝，往；斯，指水。</span></span>，而未尝往也；盈虚者如彼，而<span class="tooltip">卒<span class="tooltiptext">卒 : 最终。</span></span>莫<span class="tooltip">消长<span class="tooltiptext">消长 : 增减。</span></span>也。</tt><tt>盖将自其变者而观之，则天地<span class="tooltip">曾不能<span class="tooltiptext">曾不能 : 固定词组，连…… 都不够。曾，连…… 都。</span></span>以<span class="tooltip">一瞬<span class="tooltiptext">一瞬 : 一眨眼的工夫。</span></span>；</tt><tt>自其不变者而观之，则物与我皆无尽也，而又何羡乎！</tt><tt>且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。</tt><tt>惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。</tt><tt><span class="tooltip">是<span class="tooltiptext">是 : 这。</span></span><span class="tooltip">造物者<span class="tooltiptext">造物者 : 天地自然。</span></span>之<span class="tooltip">无尽藏<span class="tooltiptext">无尽藏 : 无穷无尽的宝藏。</span></span>也，而吾与子之所共适。”</tt></p>
+<p><tt>客喜而笑，洗盏更酌。</tt><tt><span class="tooltip">肴核<span class="tooltiptext">肴核 : 菜肴、果品。</span></span>既尽，杯盘狼籍。</tt><tt>相与<span class="tooltip">枕藉<span class="tooltiptext">枕藉 : 相互靠着。</span></span>乎舟中，不知东方之既白。</tt></p>
 
-
-            <p>长太息以掩涕兮，哀民生之多艰。</p>
-            <p>余虽好修姱以鞿羁兮，謇朝谇而夕替。</p>
-            <p>既替余以蕙纕兮，又申之以揽茝。</p>
-            <p>亦余心之所善兮，虽九死其犹未悔。</p>
-            <p>怨灵修之浩荡兮，终不察夫民心。</p>
-            <p>众女嫉余之蛾眉兮，谣诼谓余以善淫。</p>
-            <p>固时俗之工巧兮，偭规矩而改错。</p>
-            <p>背绳墨以追曲兮，竞周容以为度。</p>
-            <p>忳郁邑余侘傺兮，吾独穷困乎此时也。</p>
-            <p>宁溘死以流亡兮，余不忍为此态也。</p>
-            <p>鸷鸟之不群兮，自前世而固然。</p>
-            <p>何方圜之能周兮，夫孰异道而相安？</p>
-            <p>屈心而抑志兮，忍尤而攘诟。</p>
-            <p>伏清白以死直兮，固前圣之所厚。</p>
-            <p>悔相道之不察兮，延伫乎吾将反。</p>
-            <p>回朕车以复路兮，及行迷之未远。</p>
-            <p>步余马于兰皋兮，驰椒丘且焉止息。</p>
-            <p>进不入以离尤兮，退将复修吾初服。</p>
-            <p>制芰荷以为衣兮，集芙蓉以为裳。</p>
-            <p>不吾知其亦已兮，苟余情其信芳。</p>
-            <p>高余冠之岌岌兮，长余佩之陆离。</p>
-            <p>芳与泽其杂糅兮，唯昭质其犹未亏。</p>
-            <p>忽反顾以游目兮，将往观乎四荒。</p>
-            <p>佩缤纷其繁饰兮，芳菲菲其弥章。</p>
-            <p>民生各有所乐兮，余独好修以为常。</p>
-            <p>虽体解吾犹未变兮，岂余心之可惩。</p>
-            <p>女嬃之婵媛兮，申申其詈予，曰：</p>
-            <p>“鲧婞直以亡身兮，终然殀乎羽之野。</p>
-            <p>汝何博謇而好修兮，纷独有此姱节？</p>
-            <p>薋菉葹以盈室兮，判独离而不服。”</p>
-            <p>众不可户说兮，孰云察余之中情？</p>
-            <p>世并举而好朋兮，夫何茕独而不予听？</p>
-            <p>依前圣以节中兮，喟凭心而历兹。</p>
-            <p>济沅、湘以南征兮，就重华而敶词：</p>
-            <p>启《九辩》与《九歌》兮，夏康娱以自纵。</p>
-            <p>不顾难以图后兮，五子用失乎家巷。</p>
-            <p>羿淫游以佚畋兮，又好射夫封狐。</p>
-            <p>固乱流其鲜终兮，浞又贪夫厥家。</p>
-            <p>浇身被服强圉兮，纵欲而不忍。</p>
-            <p>日康娱而自忘兮，厥首用夫颠陨。</p>
-            <p>夏桀之常违兮，乃遂焉而逢殃。</p>
-            <p>后辛之菹醢兮，殷宗用而不长。</p>
-            <p>汤禹俨而祗敬兮，周论道而莫差。</p>
-            <p>举贤而授能兮，循绳墨而不颇。</p>
-            <p>皇天无私阿兮，览民德焉错辅。</p>
-            <p>夫维圣哲以茂行兮，苟得用此下土。</p>
-            <p>瞻前而顾后兮，相观民之计极。</p>
-            <p>夫孰非义而可用兮？孰非善而可服？</p>
-            <p>阽余身而危死兮，览余初其犹未悔。</p>
-            <p>不量凿而正枘兮，固前修以菹醢。</p>
-            <p>曾歔欷余郁邑兮，哀朕时之不当。</p>
-            <p>揽茹蕙以掩涕兮，沾余襟之浪浪。</p>
-            <p>跪敷衽以陈辞兮，耿吾既得此中正。</p>
-            <p>驷玉虬以乘鹥兮，溘埃风余上征。</p>
-            <p>朝发轫于苍梧兮，夕余至乎县圃。</p>
-            <p>欲少留此灵琐兮，日忽忽其将暮。</p>
-            <p>吾令羲和弭节兮，望崦嵫而勿迫。</p>
-            <p>路曼曼其修远兮，吾将上下而求索。</p>
-            <p>饮余马于咸池兮，总余辔乎扶桑。</p>
-            <p>折若木以拂日兮，聊逍遥以相羊。</p>
-            <p>前望舒使先驱兮，后飞廉使奔属。</p>
-            <p>鸾皇为余先戒兮，雷师告余以未具。</p>
-            <p>吾令凤鸟飞腾兮，继之以日夜。</p>
-            <p>飘风屯其相离兮，帅云霓而来御。</p>
-            <p>纷緫緫其离合兮，斑陆离其上下。</p>
-            <p>吾令帝阍开关兮，倚阊阖而望予。</p>
-            <p>时暧暧其将罢兮，结幽兰而延伫。</p>
-            <p>世溷浊而不分兮，好蔽美而嫉妒。</p>
-            <p>朝吾将济于白水兮，登阆风而緤马。</p>
-            <p>忽反顾以流涕兮，哀高丘之无女。</p>
-            <p>溘吾游此春宫兮，折琼枝以继佩。</p>
-            <p>及荣华之未落兮，相下女之可诒。</p>
-            <p>吾令丰隆椉云兮，求宓妃之所在。</p>
-            <p>解佩纕以结言兮，吾令蹇修以为理。</p>
-            <p>纷总总其离合兮，忽纬繣其难迁。</p>
-            <p>夕归次于穷石兮，朝濯发乎洧盘。</p>
-            <p>保厥美以骄傲兮，日康娱以淫游。</p>
-            <p>虽信美而无礼兮，来违弃而改求。</p>
-            <p>览相观于四极兮，周流乎天余乃下。</p>
-            <p>望瑶台之偃蹇兮，见有娀之佚女。</p>
-            <p>吾令鸩为媒兮，鸩告余以不好。</p>
-            <p>雄鸠之鸣逝兮，余犹恶其佻巧。</p>
-            <p>心犹豫而狐疑兮，欲自适而不可。</p>
-            <p>凤皇既受诒兮，恐高辛之先我。</p>
-            <p>欲远集而无所止兮，聊浮游以逍遥。</p>
-            <p>及少康之未家兮，留有虞之二姚。</p>
-            <p>理弱而媒拙兮，恐导言之不固。</p>
-            <p>世溷浊而嫉贤兮，好蔽美而称恶。</p>
-            <p>闺中既以邃远兮，哲王又不寤。</p>
-            <p>怀朕情而不发兮，余焉能忍而与此终古？</p>
-            <p>索藑茅以筳篿兮，命灵氛为余占之。</p>
-            <p>曰：“两美其必合兮，孰信修而慕之？</p>
-            <p>思九州之博大兮，岂惟是其有女？”</p>
-            <p>曰：「勉远逝而无狐疑兮，孰求美而释女？</p>
-            <p>何所独无芳草兮，尔何怀乎故宇？」</p>
-            <p>世幽昧以昡曜兮，孰云察余之善恶？</p>
-            <p>民好恶其不同兮，惟此党人其独异！</p>
-            <p>户服艾以盈要兮，谓幽兰其不可佩。</p>
-            <p>览察草木其犹未得兮，岂珵美之能当？</p>
-            <p>苏粪壤以充帏兮，谓申椒其不芳。</p>
-            <p>欲从灵氛之吉占兮，心犹豫而狐疑。</p>
-            <p>巫咸将夕降兮，怀椒糈而要之。</p>
-            <p>百神翳其备降兮，九疑缤其并迎。</p>
-            <p>皇剡剡其扬灵兮，告余以吉故。</p>
-            <p>曰：「勉陞降以上下兮，求榘矱之所同。</p>
-            <p>汤禹严而求合兮，挚咎繇而能调。</p>
-            <p>苟中情其好修兮，何必用夫行媒？</p>
-            <p>说操筑于传岩兮，武丁用而不疑。</p>
-            <p>吕望之鼓刀兮，遭周文而得举。</p>
-            <p>甯戚之讴歌兮，齐桓闻以该辅。</p>
-            <p>及年岁之未宴兮，时亦犹其未央。</p>
-            <p>恐鹈鴃之先鸣兮，使百草为之不芳。」</p>
-            <p>何琼佩之偃蹇兮，众薆然而蔽之。</p>
-            <p>惟此党人之不谅兮，恐嫉妒而折之。</p>
-            <p>时缤纷其变易兮，又何可以淹留？</p>
-            <p>兰芷变而不芳兮，荃蕙化而为茅。</p>
-            <p>何昔日之芳草兮，今直为此萧艾也？</p>
-            <p>岂其有他故兮，莫好修之害也！</p>
-            <p>余以兰为何恃兮，羌无实而容长。</p>
-            <p>委厥美以从俗兮，苟得列乎众芳。</p>
-            <p>椒专佞以慢慆兮，樧又欲充夫佩帏。</p>
-            <p>既干进而务入兮，又何芳之能祗？</p>
-            <p>固时俗之流从兮，又孰能无变化？</p>
-            <p>览椒兰其若兹兮，又况揭车与江离？</p>
-            <p>惟兹佩之可贵兮，委厥美而历兹。</p>
-            <p>芳菲菲而难亏兮，芬至今犹未沫。</p>
-            <p>和调度以自娱兮，聊浮游而求女。</p>
-            <p>及余饰之方壮兮，周流观乎上下。</p>
-            <p>灵氛既告余以吉占兮，历吉日乎吾将行。</p>
-            <p>折琼枝以为羞兮，精琼爢以为粻。</p>
-            <p>为余驾飞龙兮，杂瑶象以为车。</p>
-            <p>何离心之可同兮？吾将远逝以自疏。</p>
-            <p>邅吾道夫崑崙兮，路修远以周流。</p>
-            <p>扬云霓之晻蔼兮，鸣玉鸾之啾啾。</p>
-            <p>朝发轫于天津兮，夕余至乎西极。</p>
-            <p>凤皇翼其承旂兮，高翱翔之翼翼。</p>
-            <p>忽吾行此流沙兮，遵赤水而容与。</p>
-            <p>麾蛟龙使梁津兮，诏西皇使涉予。</p>
-            <p>路修远以多艰兮，腾众车使径待。</p>
-            <p>路不周以左转兮，指西海以为期。</p>
-            <p>屯余车其千乘兮，齐玉轪而并驰。</p>
-            <p>驾八龙之婉婉兮，载云旗之委蛇。</p>
-            <p>抑志而弭节兮，神高驰之邈邈。</p>
-            <p>奏《九歌》而舞《韶》兮，聊假日以媮乐。</p>
-            <p>陟陞皇之赫戏兮，忽临睨夫旧乡。</p>
-            <p>仆夫悲余马怀兮，蜷局顾而不行。</p>
-            <p>乱曰：已矣哉！</p>
-            <p>国无人莫我知兮，又何怀乎故都！</p>
-            <p>既莫足与为美政兮，吾将从彭咸之所居！</p>
         </div>
 
         <div class="article" id="translation">
-            <h3 class="title">离骚</h3>
-            <h4>屈原</h4>
-            <p>我是古帝高阳氏的子孙，我已去世的父亲字伯庸。</p>
-            <p>岁星在寅那年的孟春月，正当庚寅日那天我降生。</p>
-            <p>父亲仔细揣测我的生辰，于是赐给我相应的美名：</p>
-            <p>父亲把我的名取为正则，同时把我的字叫作灵均。</p>
-            <p>天赋给我很多良好素质，我不断加强自己的修养。</p>
-            <p>我把江离芷草披在肩上，把秋兰结成索佩挂身旁。</p>
-            <p>光阴似箭我好像跟不上，岁月不等待人令我心慌。</p>
-            <p>早晨我在大坡采集木兰，傍晚在小洲中摘取宿莽。</p>
-            <p>时光迅速逝去不能久留，四季更相代谢变化有常。</p>
-            <p>我想到草木已由盛到衰，恐怕自己身体逐渐衰老。</p>
-            <p>何不利用盛时扬弃秽政，为何还不改变这些法度？</p>
-            <p>乘上千里马纵横驰骋吧，来呀，我在前引导开路！</p>
-            <p>从前三后公正德行完美，所以群贤都在那里聚会。</p>
-            <p>杂聚申椒菌桂似的人物，岂止联系优秀的茝和蕙。</p>
-            <p>唐尧虞舜多么光明正直，他们沿着正道登上坦途。</p>
-            <p>夏桀殷纣多么狂妄邪恶，贪图捷径必然走投无路。</p>
-            <p>结党营私的人苟安享乐，他们的前途黑暗而险阻。</p>
-            <p>难道我害怕招灾惹祸吗，我只担心祖国为此覆没。</p>
-            <p>前前后后我奔走照料啊，希望君王赶上先王脚步。</p>
-            <p>你不深入了解我的忠心，反而听信谗言对我发怒。</p>
-            <p>我早知道忠言直谏有祸，原想忍耐却又控制不住。</p>
-            <p>上指苍天请它给我作证．一切都为了君王的缘故。</p>
-            <p>你以前既然和我有成约，现另有打算又追悔当初。</p>
-            <p>我并不难于与你别离啊，只是伤心你的反反复复。</p>
-            <p>我已经栽培了很多春兰，又种植香草秋蕙一大片。</p>
-            <p>分垄培植了留夷和揭车，还把杜衡芳芷套种其间。</p>
-            <p>我希望它们都枝繁叶茂，等待着我收割的那一天。</p>
-            <p>它们枯萎死绝有何伤害，使我痛心的是它们质变。</p>
-            <p>大家都拚命争着向上爬，利欲熏心而又贪得无厌。</p>
-            <p>他们猜疑别人宽恕自己，他们勾心斗角相互妒忌。</p>
-            <p>急于奔走钻营争权夺利，这些不是我追求的东西。</p>
-            <p>只觉得老年在渐渐来临，担心美好名声不能树立。</p>
-            <p>早晨我饮木兰上的露滴，晚上我用菊花残瓣充饥。</p>
-            <p>只要我的情感坚贞不易，形消骨立又有什么关系。</p>
-            <p>我用树木的根编结茝草，再把薜荔花蕊穿在一起。</p>
-            <p>我拿菌桂枝条联结蕙草，胡绳搓成绳索又长又好。</p>
-            <p>我向古代的圣贤学习啊，不是世间俗人能够做到。</p>
-            <p>我与现在的人虽不相容，我却愿依照彭咸的遗教。</p>
-            <p>我揩着眼泪啊声声长叹，可怜人生道路多么艰难。</p>
-            <p>我虽爱好修洁严于责己，早晨被辱骂晚上又丢官。</p>
-            <p>他们攻击我佩带蕙草啊，又指责我爱好采集茝兰。</p>
-            <p>这是我心中追求的东西，就是多次死亡也不后悔。</p>
-            <p>怨就怨楚王这样糊涂啊，他始终不体察别人心情。</p>
-            <p>那些女人妒忌我的丰姿，造谣诬蔑说我妖艳好淫。</p>
-            <p>庸人本来善于投机取巧，背弃规矩而又改变政策。</p>
-            <p>违背是非标准追求邪曲，争着苟合取悦作为法则。</p>
-            <p>忧愁烦闷啊我失意不安，现在孤独穷困多么艰难。</p>
-            <p>宁可马上死去魂魄离散，媚俗取巧啊我坚决不干。</p>
-            <p>雄鹰不与那些燕雀同群，原本自古以来就是这般。</p>
-            <p>方和圆怎能够互相配合，志向不同何能彼此相安。</p>
-            <p>宁愿委曲心志压抑情感，宁把斥责咒骂统统承担。</p>
-            <p>保持清白节操死于直道，这本为古代圣贤所称赞！</p>
-            <p>后悔当初不曾看清前途，迟疑了一阵我又将回头。</p>
-            <p>调转我的车走回原路啊，趁着迷途未远赶快罢休。</p>
-            <p>我打马在兰草水边行走，跑上椒木小山暂且停留。</p>
-            <p>既然进取不成反而获罪，那就回来把我旧服重修。</p>
-            <p>我要把菱叶裁剪成上衣，我并用荷花把下裳织就。</p>
-            <p>没有人了解我也就罢了，只要内心真正馥郁芳柔。</p>
-            <p>把我的帽子加得高高的，把我的佩带增得长悠悠。</p>
-            <p>虽然芳洁污垢混杂一起，只有纯洁品质不会腐朽。</p>
-            <p>我忽然回头啊纵目远望，我将游观四面遥远地方。</p>
-            <p>佩着五彩缤纷华丽装饰，散发出一阵阵浓郁清香。</p>
-            <p>人们各有自己的爱好啊，我独爱好修饰习以为常。</p>
-            <p>即使粉身碎骨也不改变，难道我能受警戒而彷徨！</p>
-            <p>姐姐对我遭遇十分关切，她曾经一再地向我告诫。</p>
-            <p>她说「鲧太刚直不顾性命，结果被杀死在羽山荒野。</p>
-            <p>你何忠言无忌爱好修饰，还独有很多美好的节操。</p>
-            <p>满屋堆着都是普通花草，你却与众不同不肯佩服。</p>
-            <p>众人无法挨家挨户说明，谁会来详察我们的本心。</p>
-            <p>世上的人都爱成群结伙，为何对我的话总是不听？」</p>
-            <p>我以先圣行为节制性情，愤懑心情至今不能平静。</p>
-            <p>渡过沅水湘水向南走去，我要对虞舜把道理讲清：</p>
-            <p>「夏启偷得《九辩》和《九歌》啊，他寻欢作乐而放纵忘情。</p>
-            <p>不考虑将来看不到危难，因此武观得以酿成内乱。</p>
-            <p>后羿爱好田猎溺于游乐，对射杀大狐狸特别喜欢。</p>
-            <p>本来淫乱之徒无好结果，寒浞杀羿把他妻子霸占。</p>
-            <p>寒浇自恃有强大的力气，放纵情欲不肯节制自己。</p>
-            <p>天天寻欢作乐忘掉自身，因此他的脑袋终于落地。</p>
-            <p>夏桀行为总是违背常理，结果灾殃也就难以躲避。</p>
-            <p>纣王把忠良剁成肉酱啊，殷朝天下因此不能久长。</p>
-            <p>商汤夏禹态度严肃恭敬，正确讲究道理还有文王。</p>
-            <p>他们都能选拔贤者能人，遵循一定准则不会走样。</p>
-            <p>上天对一切都公正无私，见有德的人就给予扶持。</p>
-            <p>只有古代圣王德行高尚，才能够享有天下的土地。</p>
-            <p>回顾过去啊把将来瞻望，看到了做人的根本道理。</p>
-            <p>哪有不义的事可以去干，哪有不善的事应该担当。</p>
-            <p>我虽然面临死亡的危险，毫不后悔自己当初志向。</p>
-            <p>不度量凿眼就削正榫头，前代的贤人正因此遭殃。」</p>
-            <p>我泣声不绝啊烦恼悲伤，哀叹自己未逢美好时光。</p>
-            <p>拿着柔软蕙草揩抹眼泪，热泪滚滚沾湿我的衣裳。</p>
-            <p>铺开衣襟跪着慢慢细讲，我已获得正道心里亮堂。</p>
-            <p>驾驭着玉虬啊乘着凤车，在风尘掩翳中飞到天上。</p>
-            <p>早晨从南方的苍梧出发，傍晚就到达了崑崙山上。</p>
-            <p>我本想在灵琐稍事逗留，夕阳西下已经暮色苍茫。</p>
-            <p>我命令羲和停鞭慢行啊，莫叫太阳迫近崦嵫山旁。</p>
-            <p>前面的道路啊又远又长，我将上上下下追求理想。</p>
-            <p>让我的马在咸池里饮水，把马缰绳拴在扶桑树上。</p>
-            <p>折下若木枝来挡住太阳，我可以暂且从容地徜徉。</p>
-            <p>叫前面的望舒作为先驱，让后面的飞廉紧紧跟上。</p>
-            <p>鸾乌凤凰为我在前戒备，雷师却说还没安排停当。</p>
-            <p>我命令凤凰展翅飞腾啊，要日以继夜地不停飞翔。</p>
-            <p>旋风结聚起来互相靠拢，它率领着云霓向我迎上。</p>
-            <p>云霓越聚越多忽离忽合，五光十色上下飘浮荡漾。</p>
-            <p>我叫天门守卫把门打开，他却倚靠天门把我呆望。</p>
-            <p>日色渐暗时间已经晚了，我纽结着幽兰久久徜徉。</p>
-            <p>这个世道混浊善恶不分，喜欢嫉妒别人抹煞所长。</p>
-            <p>清晨我将要渡过白水河，登上阆风山把马儿系着。</p>
-            <p>忽然回头眺望涕泪淋漓，哀叹高丘竟然没有美女。</p>
-            <p>我飘忽地来到春宫一游，折下玉树枝条增添佩饰。</p>
-            <p>趁琼枝上花朵还未凋零，把能受馈赠的美女找寻。</p>
-            <p>我命令云师把云车驾起，我去寻找宓妃住在何处。</p>
-            <p>解下佩带束好求婚书信，我请蹇修前去给我做媒。</p>
-            <p>云霓纷纷簇集忽离忽合，很快知道事情乖戾难成。</p>
-            <p>晚上宓妃回到穷石住宿，清晨到洧盘把头发洗濯。</p>
-            <p>宓妃仗着貌美骄傲自大，成天放荡不羁寻欢作乐。</p>
-            <p>她虽然美丽但不守礼法，算了吧放弃她另外求索。</p>
-            <p>我在天上观察四面八方，周游一遍后我从天而降。</p>
-            <p>遥望华丽巍峨的玉台啊，见有娀氏美女住在台上。</p>
-            <p>我请鸩鸟前去给我做媒，鸩鸟却说那个美女不好。</p>
-            <p>雄鸠叫唤着飞去说媒啊，我又嫌它过分诡诈轻佻。</p>
-            <p>我心中犹豫而疑惑不定，想自己去吧又觉得不妙。</p>
-            <p>凤凰已接受托付的聘礼，恐怕高辛赶在我前面了。</p>
-            <p>想到远方去又无处安居，只好四处游荡流浪逍遥。</p>
-            <p>趁少康还未结婚的时节，还留着有虞国两位阿娇。</p>
-            <p>媒人无能没有灵牙利齿，恐怕能说合的希望很小。</p>
-            <p>世间混乱污浊嫉贤妒能，爱障蔽美德把恶事称道。</p>
-            <p>闺中美女既然难以接近，贤智君王始终又不醒觉。</p>
-            <p>满腔忠贞激情无处倾诉，我怎么能永远忍耐下去！</p>
-            <p>我找来了灵草和细竹片，请求神巫灵氛为我占卜。</p>
-            <p>「听说双方美好必将结合看谁真正好修必然爱慕。</p>
-            <p>想到天下多么辽阔广大，难道只在这里才有娇女？」</p>
-            <p>「劝你远走高飞不要迟疑，谁寻求美人会把你放弃？</p>
-            <p>世间什么地方没有芳草，你又何必苦苦怀恋故地？</p>
-            <p>世道黑暗使人眼光迷乱，谁又能够了解我们底细？</p>
-            <p>人们的好恶本来不相同，只是这邦小人更加怪异。</p>
-            <p>人人都把艾草挂满腰间，说幽兰是不可佩的东西。</p>
-            <p>对草木好坏还分辨不清，怎么能够正确评价玉器？</p>
-            <p>用粪土塞满自己的香袋，反说佩的申椒没有香气。」</p>
-            <p>想听从灵氛占卜的好卦，心里犹豫迟疑决定不下。</p>
-            <p>听说巫咸今晚将要降神，我带着花椒精米去接他。</p>
-            <p>天上诸神遮天蔽日齐降，九疑山的众神纷纷迎迓。</p>
-            <p>他们灵光闪闪显示神灵，巫咸又告诉我不少佳话。</p>
-            <p>他说「应该努力上天下地，去寻求意气相投的同道。</p>
-            <p>汤禹为人严正虚心求贤，得到伊尹皋陶君臣协调。</p>
-            <p>只要内心善良爱好修洁，又何必一定要媒人介绍？</p>
-            <p>傅说拿祷杵在傅岩筑墙，武丁毫不犹豫用他为相。</p>
-            <p>太公吕望曾经做过屠夫，他被任用是遇到周文王。</p>
-            <p>甯戚喂牛敲着牛角歌唱，齐桓公听见后任为大夫。</p>
-            <p>趁现在年轻大有作为啊，施展才能还有大好时光。</p>
-            <p>只怕杜鹃它叫得太早啊，使得百草因此不再芳香。」</p>
-            <p>为什么这样美好的琼佩，人们却要掩盖它的光辉。</p>
-            <p>想到这邦小人不讲信义，恐怕出于嫉妒把它摧毁。</p>
-            <p>时世纷乱而变化无常啊，我怎么可以在这里久留。</p>
-            <p>兰草和芷草失掉了芬芳，荃草和惠草也变成茅莠。</p>
-            <p>为什么从前的这些香草，今天全都成为荒蒿野艾。</p>
-            <p>难道还有什么别的理由，不爱好修洁造成的祸害。</p>
-            <p>我还以为兰草最可依靠，谁知华而不实虚有其表。</p>
-            <p>兰草抛弃美质追随世俗，勉强列入众芳辱没香草。</p>
-            <p>花椒专横谄媚十分傲慢，茱萸想进香袋冒充香草。</p>
-            <p>它们既然这么热心钻营，又有什么香草重吐芳馨。</p>
-            <p>本来世态习俗随波逐流，又还有谁能够意志坚定？</p>
-            <p>看到香椒兰草变成这样，何况揭车江离能不变心。</p>
-            <p>只有我的佩饰最可贵啊，保持它的美德直到如今。</p>
-            <p>浓郁的香气难以消散啊，到今天还在散发出芳馨。</p>
-            <p>我调度和谐地自我欢娱，姑且飘游四方寻求美女。</p>
-            <p>趁着我的佩饰还很盛美，我要周游观访上天下地。</p>
-            <p>灵氛已告诉我占得吉卦，选个好日子我准备出发。</p>
-            <p>折下玉树枝叶作为肉脯，我舀碎美玉把干粮备下。</p>
-            <p>给我驾车啊用飞龙为马，车上装饰着美玉和象牙。</p>
-            <p>彼此不同心怎能配合啊，我将要远去主动离开他。</p>
-            <p>我把行程转向崑崙山下，路途遥远继续周游观察。</p>
-            <p>云霞虹霓飞扬遮住阳光，车上玉铃丁当响声错杂。</p>
-            <p>清晨从天河的渡口出发，最远的西边我傍晚到达。</p>
-            <p>凤凰展翅承托着旌旗啊，长空翱翔有节奏地上下。</p>
-            <p>忽然我来到这流沙地段，只得沿着赤水行进缓缓。</p>
-            <p>指挥蛟龙在渡口上架桥，命令西皇将我渡到对岸。</p>
-            <p>路途多么遥远又多艰险，我传令众车在路旁等待。</p>
-            <p>经过不周山向左转去啊，我的目的地已指定西海。</p>
-            <p>我再把成千辆车子聚集，把玉轮对齐了并驾齐驱。</p>
-            <p>驾车的八龙蜿蜒地前进，载着云霓旗帜随风卷曲。</p>
-            <p>定下心来啊慢慢地前行，难控制飞得远远的思绪。</p>
-            <p>演奏着《九歌》跳起《韶》舞啊，且借大好时光寻求欢娱。</p>
-            <p>太阳东升照得一片明亮，忽然看见我思念的故乡。</p>
-            <p>我的仆从悲伤马也感怀，退缩回头不肯走向前方。</p>
-            <p>尾声：「算了吧！</p>
-            <p>国内既然没有人了解我，我又何必怀念故国旧居。</p>
-            <p>既然不能实现理想政治，我将追随彭成安排自己。」</p>
+            <h3 class="title">赤壁赋</h3>
+            <h4>苏轼</h4>
+            <p><tt>壬戌年秋天，七月十六日，我与友人在赤壁下泛舟遊玩。</tt><tt>清风阵阵拂来，水面波澜不起。</tt><tt>举起酒杯向同伴劝酒，吟诵《明月》中 “窈窕” 这一章。</tt><tt>不一会儿，明月从东山後昇起，在斗宿与牛宿之间来回移动。</tt><tt>白茫茫的雾气横贯江面，水光连着天际。放纵一片苇叶似的小船随意漂浮，越过茫茫的江面。</tt><tt>浩浩淼淼好像乘风凌空而行，并不知道到哪里才会停栖，</tt><tt>飘飘摇摇好像要离开尘世飘飞而起，羽化成仙进入仙境。</tt></p>
+<p><tt>在这时喝酒喝得非常高兴，敲着船边唱起歌来。</tt><tt>歌中唱到:“桂木船棹啊香兰船桨，击打着月光下的清波，在泛着月光的水面逆流而上。</tt><tt>我的情思啊悠远茫茫，眺望美人啊，却在天的另一方。” </tt><tt>有会吹洞箫的客人，配着节奏为歌声伴和，</tt><tt>洞箫的声音呜呜咽咽:有如哀怨有如思慕，既像啜泣也像倾诉，余音在江上回荡，像细丝一样连续不断。</tt><tt>能使深谷中的蛟龙为之起舞，能使孤舟上的寡妇为之饮泣。</tt></p>
+<p><tt>我的神色也愁惨起来，整好衣襟坐端正，向客人问道:“箫声为什么这样哀怨呢？” </tt><tt>客人回答:“‘月明星稀，乌鹊南飞’，这不是曹公孟德的诗么？</tt><tt>这里向西可以望到夏口，向东可以望到武昌，山河接壤连绵不绝，目力所及，一片郁郁苍苍。这不正是曹孟德被周瑜所围困的地方么？</tt><tt>当初他攻陷荆州，夺得江陵，沿长江顺流东下，麾下的战船首尾相连延绵千里，旗子将天空全都蔽住，面对大江斟酒，横执长矛吟诗，本来是当世的一位英雄人物，然而现在又在哪里呢？</tt><tt>何况我与你在江中的小洲打渔砍柴，以鱼虾为侣，以麋鹿为友，在江上驾着这一叶小舟，举起杯盏相互敬酒，</tt><tt>如同蜉蝣置身于广阔的天地中，像沧海中的一粒粟米那样渺小。</tt><tt>唉，哀叹我们的一生衹是短暂的片刻，不由羡慕长江的没有穷尽。</tt><tt>想要携同仙人携手遨遊各地，与明月相拥而永存世间。</tt><tt>知道这些终究不能实现，只得将憾恨化为箫音，托寄在悲凉的秋风中罢了。”</tt></p>
+<p><tt>我问道:“你可也知道这水与月？</tt><tt>时间流逝就像这水，其实并没有真正逝去；时圆时缺的就像这月，终究没有增减。</tt><tt>可见，从事物易变的一面看来，那么天地间万事万物时刻在变动，连一眨眼的工夫都不停止；</tt><tt>而从事物不变的一面看来，万物同我们来说都是永恒的，又有什么可羡慕的呢？</tt><tt>何况天地之间，万物各有主宰者，若不是自己应该拥有的，即使一分一毫也不能求取。</tt><tt>只有江上的清风，以及山间的明月，听到便成了声音，进入眼帘便绘出形色，取得这些不会有人禁止，感受这些也不会有竭尽的忧虑。</tt><tt>这是大自然恩赐的没有穷尽的宝藏，我和你可以共同享受。”</tt></p>
+<p><tt>客人高兴地笑了，洗净酒杯重新斟酒。</tt><tt>菜肴果品都已喫完，杯子盘子杂乱一片。</tt><tt>大家互相枕着垫着睡在船上，不知不觉东方已经露出白色的曙光。</tt></p>
         </div>
     </div>
 
