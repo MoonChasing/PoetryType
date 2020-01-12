@@ -4,6 +4,11 @@
 #include<vector>
 
 
+void genHTML(const std::string& title,
+		const std::string& name,
+		const std::vector<std::string> originalHTML,
+		const std::vector<std::string> translationHTML );
+
 std::string genOriginalSentence(
 		const std::string& original, 
 		std::string::size_type& sentinel,
@@ -23,7 +28,7 @@ int getColonIndex(const std::string& str)
 	return -1;
 }
 
-void writeln(std::fstream& out, std::string& str)
+void writeln(std::fstream& out, std::string str)
 {
 	out << str << std::endl;
 }
@@ -117,19 +122,20 @@ int main()
 		tp += tmp + "</tt>";
 		std::cout << tmp << std::endl;
 	}
-	std::fstream outTest("test_p.txt", std::ios::out);
-	if(!outTest.is_open())
-	{
-		std::cout << "bad!" << std::endl;
-	}
-	for(auto s : originalHTML)
-		outTest << s;
-	for(int i=0; i<5; i++)
-		outTest << std::endl;
-	for(auto s : translationHTML)
-		outTest << s;
+	//std::fstream outTest("test_p.txt", std::ios::out);
+	//if(!outTest.is_open())
+	//{
+	//	std::cout << "bad!" << std::endl;
+	//}
+	//for(auto s : originalHTML)
+	//	outTest << s;
+	//for(int i=0; i<5; i++)
+	//	outTest << std::endl;
+	//for(auto s : translationHTML)
+	//	outTest << s;
 	raw.close();
-	outTest.close();
+	//outTest.close();
+	genHTML(title, name, originalHTML, translationHTML);
 	return 0;
 }
 
@@ -160,7 +166,67 @@ std::string genOriginalSentence(
 	return ans;
 }
 
+void genHTML(const std::string& title,
+		const std::string& name,
+		const std::vector<std::string> originalHTML,
+		const std::vector<std::string> translationHTML )
+{
+	std::fstream out(title+".html", std::ios::out);
+	if(!out.is_open())
+	{
+		std::cout << "Open new html failed!" << std::endl;
+		return;
+	}
 
+	writeln(out, "<!DOCTYPE html>");
+	writeln(out, "<html>");
+	writeln(out, "<head>");
+	writeln(out, "<meta charset=\"utf-8\"/>");
+	writeln(out, "<title>"+title+"</title>");
+	writeln(out, "<link rel=\"stylesheet\" type=\"text/css\" href=\"demo.css\" />");
+	writeln(out, "<link rel=\"stylesheet\" type=\"text/css\" href=\"temp.css\" />");
+	writeln(out, "<script src=\"demo.js\"></script>");
+	writeln(out, "<script src=\"jquery.min.js\"></script>");
+	writeln(out, "<script>");
+	writeln(out, "$(function(){");
+	writeln(out, "$(\"#original tt\").mouseover(function(){");
+	writeln(out, "var index=$(\"#original tt\").index(this);");
+	writeln(out, "var translation = $(\"#translation\").find(\"tt\").get(index)");
+	writeln(out, "$(translation).css('color', \"#ffffff\")");
+	writeln(out, "});");
+	writeln(out, "});");
+	writeln(out, "$(function(){");
+	writeln(out, "$(\"#original tt\").mouseout(function(){");
+	writeln(out, "var index=$(\"#original tt\").index(this);");
+	writeln(out, "var translation = $(\"#translation\").find(\"tt\").get(index)");
+	writeln(out, "$(translation).css('color', \"#888\")");
+	writeln(out, "});");
+	writeln(out, "});");
+	writeln(out, "</script>");
+	writeln(out, "</head>");
+	writeln(out, "<body>");
+	writeln(out, "<div id=\"container\">");
+	writeln(out, "<div class=\"article\" id=\"original\" onscroll=\"myFun()\" onmousewheel=\"myFun()\">");
+	writeln(out, "<h3 class=\"title\">" + title + "</h3>");
+	writeln(out, "<h4>" + name + "</h4>");
+	
+	for( auto s : originalHTML )
+		writeln(out, s);
+
+	writeln(out, "</div>");
+	writeln(out, "<div class=\"article\" id=\"translation\">");
+	writeln(out, "<h3 class=\"title\">" + title + "</h3>");
+	writeln(out, "<h4>" + name + "</h4>");
+
+	for( auto s : translationHTML )
+		writeln(out, s);
+
+	writeln(out, "</div>");
+	writeln(out, "</div>");
+	writeln(out, "</body>");
+	writeln(out, "</html>");
+	out.close();
+}
 
 
 
