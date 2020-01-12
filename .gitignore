@@ -6,3 +6,7 @@ out
 demo_2.html
 *.log
 *.temp
+test/
+*.html
+*.swp
+
