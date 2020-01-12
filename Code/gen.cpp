@@ -35,7 +35,10 @@ void writeln(std::fstream& out, std::string str)
 
 int main()
 {
-	std::fstream raw("赤壁赋.txt");
+	std::cout << "请输入读入文件名：" << std::endl;
+	std::string filename;
+	std::cin >> filename;
+	std::fstream raw(filename);
 	std::string tmp;
 	std::string title, name;
 	if(!raw.is_open())
