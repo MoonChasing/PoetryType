@@ -28,7 +28,7 @@ int getColonIndex(const std::string& str)
 	return -1;
 }
 
-void writeln(std::fstream& out, std::string str)
+void writeln(std::fstream& out, const std::string& str)
 {
 	out << str << std::endl;
 }
@@ -125,19 +125,9 @@ int main()
 		tp += tmp + "</tt>";
 		std::cout << tmp << std::endl;
 	}
-	//std::fstream outTest("test_p.txt", std::ios::out);
-	//if(!outTest.is_open())
-	//{
-	//	std::cout << "bad!" << std::endl;
-	//}
-	//for(auto s : originalHTML)
-	//	outTest << s;
-	//for(int i=0; i<5; i++)
-	//	outTest << std::endl;
-	//for(auto s : translationHTML)
-	//	outTest << s;
 	raw.close();
-	//outTest.close();
+	
+	// gen HTML file
 	genHTML(title, name, originalHTML, translationHTML);
 	return 0;
 }
@@ -213,7 +203,7 @@ void genHTML(const std::string& title,
 	writeln(out, "<h3 class=\"title\">" + title + "</h3>");
 	writeln(out, "<h4>" + name + "</h4>");
 	
-	for( auto s : originalHTML )
+	for( auto& s : originalHTML )
 		writeln(out, s);
 
 	writeln(out, "</div>");
@@ -221,7 +211,7 @@ void genHTML(const std::string& title,
 	writeln(out, "<h3 class=\"title\">" + title + "</h3>");
 	writeln(out, "<h4>" + name + "</h4>");
 
-	for( auto s : translationHTML )
+	for( auto& s : translationHTML )
 		writeln(out, s);
 
 	writeln(out, "</div>");
